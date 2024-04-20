@@ -1,27 +1,21 @@
 // https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/javascript
 
 function towerBuilder(nFloors) {
-    if (nFloors > 0) return floors;
     let floors = [];
+    if (nFloors <= 0) return floors;
 
-    function builder(space) {
-        let floorSpace = nFloors * 2 - 1;
-        let spaceArray = '';
-        for (let i = 0; i < space; i++) {
-            spaceArray = spaceArray + ' ';
-        }
-        let numOfFutnotes = floorSpace - spaceArray.length * 2;
-        let futnotes = '';
-        for (let i = 0; i < numOfFutnotes; i++) {
-            futnotes = futnotes + "*";
-        }
-        floors.shift(spaceArray + futnotes + spaceArray);
-        if (numOfFutnotes > 1) {
-            builder(space + 1);
-        }
+    function buildFloor(space, stars) {
+        let floor = ' '.repeat(space) + '*'.repeat(stars) + ' '.repeat(space);
+        floors.push(floor);
     }
 
-    builder(0);
+    for (let i = 0; i < nFloors; i++) {
+        let space = nFloors - i - 1;
+        let stars = 2 * i + 1;
+        buildFloor(space, stars);
+    }
+
+    return floors;
 }
 
 
