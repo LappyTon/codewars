@@ -1,39 +1,18 @@
-// https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/javascript
-// ^^^^^^ LINK THERE ^^^^^^`
-// Number of trailing zeros of N!
-function factorial(n) {
-  if (n === 0 || n === 1) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
+// https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/train/javascript
+//  ^^^ LINK HERE ^^^
 
-function zeros(n) {
-  let fact = factorial(n);
-  console.log(fact);
-  let result = 0;
-  for (let i = fact.toString().length - 1; i >= 0; i--) {
-    if (fact.toString()[i] === '0') {
-      result++;
-    } else {
-      break;
+function solution(number) {
+    let fives = Math.floor((number - 1) / 5);
+    let threes = Math.floor((number - 1) / 3);
+    let sum = 0;
+    for (let i = 1; i <= fives; i++) {
+      sum += i * 5;
     }
+    for (let i = 1; i <= threes; i++) {
+      if (i % 5 !== 0) {
+        sum += i * 3;
+      }
+    }
+    return sum;
   }
-  return result;
-}
-
-
-  // tasks:
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-   
+  

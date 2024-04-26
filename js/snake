@@ -1,0 +1,24 @@
+// https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/train/javascript
+//  ^^^ LINK HERE ^^^
+
+snail = function(matrix, elements) {
+    // if (!bool) {
+    // let elements = []
+    // }
+    function checker(matrix) {if (!matrix.length) return elements;}
+    // elements.push(matrix[0].shift())
+    // matrix.shift();
+    // checker(matrix)
+    // for (let array of matrix) {
+    //     elements.push(array.pop())
+    // }
+    // checker(matrix)
+    // while (matrix[-1].length) {
+    //     elements.push
+    //     (matrix[0].shift())
+    // }
+    checker(matrix)
+    // matrix.shift();
+    // checker(matrix)
+    // return elements
+}
