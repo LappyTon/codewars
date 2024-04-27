@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/5a6b24d4e626c59d5b000066/train/javascript
+// https://www.codewars.com/kata/52449b062fb80683ec000024
 // ^^^^^^ LINK THERE ^^^^^^`
 // The Hashtag Generator
 function generateHashtag (str) {

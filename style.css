@@ -10,7 +10,7 @@ p {
 }
 h2 {
     color: #a689be;
-    font-size: 20px
+    font-size: 18px;
 }
 .codewars {
     color: #cf2d2d;
@@ -18,4 +18,11 @@ h2 {
 h3 {
     color: rgb(161, 120, 255)
 
+}
+#done {
+    color: #8e11f5;
+}
+#lengt {
+    color: #7911ce;
+    
 }

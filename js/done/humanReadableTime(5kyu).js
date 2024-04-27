@@ -1,8 +1,8 @@
-// https://www.codewars.com/kata/52685f7382004e774f0001f7/train/javascript
+// https://www.codewars.com/kata/52685f7382004e774f0001f7
 // ^^^^^^ LINK THERE ^^^^^^
 // Human Readable Time
 
-function humanReadable (seconds) {
+function humanReadable(seconds) {
     let time = {
       hour: 0, min: 0, sec: 0
     }
