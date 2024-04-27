@@ -1,18 +1,20 @@
 // https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/train/javascript
 //  ^^^ LINK HERE ^^^
 
-function solution(number) {
-    let fives = Math.floor((number - 1) / 5);
-    let threes = Math.floor((number - 1) / 3);
-    let sum = 0;
-    for (let i = 1; i <= fives; i++) {
-      sum += i * 5;
-    }
-    for (let i = 1; i <= threes; i++) {
-      if (i % 5 !== 0) {
-        sum += i * 3;
-      }
-    }
-    return sum;
+function snail(matrix, result) {
+  if (!result) result = [];
+  if (!matrix.length) return result
+
+  result.push(...matrix.shift());
+  for (let i = 0; i < matrix.length; i++) {
+    result.push(matrix[i].pop());
   }
-  
+  if (matrix.length) {
+    result.push(...matrix.pop().reverse());
+  }
+  for (let i = matrix.length - 1; i >= 0; i--) {
+    result.push(matrix[i].shift());
+  }
+
+  return snail(matrix, result);
+}
