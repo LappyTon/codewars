@@ -1,0 +1,23 @@
+let constlawn = [
+  '2       ',
+  '  S     ',
+  '21  S   ',
+  '13      ',
+  '2 3     '
+];
+let zombies = [[0,4,28],[1,1,6],[2,0,10],[2,4,15],[3,2,16],[3,3,13]];
+  
+function plantsAndZombies(lawn,zombies){
+  let arrLawn = []
+  lawn.forEach(str=>{
+    arrLawn.push(str.split(''))
+  })
+  arrLawn.forEach(arr=>{
+    
+  })
+}  
+
+
+function evenOrOdd(number) {
+  return (Number.isInteger(number/2)) ? 'Even' : 'Odd'
+}
